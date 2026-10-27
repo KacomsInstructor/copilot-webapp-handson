@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}ログイン{% endblock %}
+{% block content %}
+<section class="card login-card">
+  <h1>ようこそ</h1>
+  <p>ボタンを押すと、体験用ユーザーとしてログインします。</p>
+  <form method="post" action="{{ url_for('main.login_post') }}">
+    <button type="submit" class="btn btn-primary">体験用ユーザーとしてログイン</button>
+  </form>
+</section>
+{% endblock %}
+
+
+

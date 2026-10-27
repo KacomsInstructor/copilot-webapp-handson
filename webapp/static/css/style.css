@@ -1,0 +1,29 @@
+/* ハンズオン用の基本スタイル（外部CDNは使いません） */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Yu Gothic UI", "Meiryo", sans-serif; color: #333; background: #f7f7f8; }
+.demo-banner { background: #fbdddc; color: #c21920; font-size: 13px; text-align: center; padding: 4px; }
+.app-header { display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 24px; background: #c21920; color: #fff; }
+.app-title { color: #fff; font-weight: bold; font-size: 18px; text-decoration: none; }
+.user-box { display: flex; align-items: center; gap: 12px; font-size: 14px; }
+.user-box form { margin: 0; }
+.container { max-width: 960px; margin: 24px auto; padding: 0 16px; }
+.card { background: #fff; border-radius: 8px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,.1); margin-bottom: 16px; }
+.login-card { max-width: 420px; margin: 48px auto; text-align: center; }
+h1 { font-size: 22px; margin-top: 0; }
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th, td { border-bottom: 1px solid #e5e5e5; padding: 8px 10px; text-align: left; }
+th { background: #fafafa; }
+label { display: block; font-weight: bold; margin: 12px 0 4px; }
+input, select, textarea { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+.btn { display: inline-block; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;
+  font-size: 14px; text-decoration: none; }
+.btn-primary { background: #c21920; color: #fff; }
+.btn-secondary { background: #fff; color: #c21920; border: 1px solid #fff; }
+.btn-danger { background: #555; color: #fff; }
+.flash { padding: 10px 14px; border-radius: 4px; margin-bottom: 12px; }
+.flash-success { background: #e8f5e9; color: #2e7d32; }
+.flash-error { background: #fdecea; color: #c21920; }
+.app-footer { text-align: center; font-size: 12px; color: #888; padding: 16px; }
+
+

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}業務アプリ{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="demo-banner">このログインはデモ機能です（本人確認やアクセス制御は行いません）</div>
+  <header class="app-header">
+    <a class="app-title" href="{{ url_for('main.index') }}">{% block app_name %}業務アプリ{% endblock %}</a>
+    {% if session.get('user') %}
+      <div class="user-box">
+        <span>{{ session['user']['name'] }}（{{ session['user']['department'] }}）</span>
+        <form method="post" action="{{ url_for('main.logout') }}">
+          <button type="submit" class="btn btn-secondary">ログアウト</button>
+        </form>
+      </div>
+    {% endif %}
+  </header>
+  <main class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, message in messages %}
+        <div class="flash flash-{{ category }}">{{ message }}</div>
+      {% endfor %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="app-footer">保存先：{{ storage_mode }}</footer>
+</body>
+</html>
+
+
+

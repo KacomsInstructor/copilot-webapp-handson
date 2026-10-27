@@ -1,0 +1,24 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+ 
+# Secrets / local settings
+.env
+ 
+# Local data
+data/items.json
+ 
+# Terraform
+infra/terraform/.terraform/
+infra/terraform/.terraform.lock.hcl
+infra/terraform/terraform.tfvars
+*.tfstate
+*.tfstate.*
+*.tfplan
+ 
+# Deploy package
+app.zip
+
+

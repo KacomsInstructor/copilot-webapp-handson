@@ -1,0 +1,12 @@
+# scripts\init-tfvars.cmd -ResourceGroup <リソースグループ名> で terraform.tfvars が作成されます。
+# 手動で作る場合は、このファイルを terraform.tfvars にコピーして値を設定してください。
+# terraform.tfvars は Git に登録しないでください（.gitignore 済み）。
+ 
+subscription_id     = "00000000-0000-0000-0000-000000000000"
+resource_group_name = "your-resource-group"
+location            = "japaneast"
+name_prefix         = "handson"
+app_identity_name   = "id-handson-app"
+deployer_object_id  = "00000000-0000-0000-0000-000000000000"
+
+
